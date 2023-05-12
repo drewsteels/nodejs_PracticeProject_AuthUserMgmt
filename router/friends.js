@@ -30,7 +30,6 @@ router.post("/",function (req,res){
             "lastName":req.body.lasttName,
             //Add similarly for lastName
             //Add similarly for DOB
-            let DOB = req.body.DOB;
             }
     }
 res.send("The user" + (' ')+ (req.body.firstName) + " Has been added!");
@@ -45,8 +44,6 @@ router.put("/:email", function (req, res) {
         let DOB = req.body.DOB;
         //Add similarly for firstName
         //Add similarly for lastName
-        "firstName":req.body.firstName,
-        "lastName":req.body.lasttName,
 
         //if DOB the DOB has been changed, update the DOB 
         if(DOB) {
@@ -54,8 +51,7 @@ router.put("/:email", function (req, res) {
         }
         //Add similarly for firstName
         //Add similarly for lastName
-        "firstName":req.body.firstName,
-        "lastName":req.body.lasttName,
+
         friends[email]=friend;
         res.send(`Friend with the email  ${email} updated.`);
     }
